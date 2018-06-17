@@ -1,0 +1,32 @@
+article    {
+  border: solid 1px black;
+  padding: 15px;
+  margin: 5px;
+  background: yellow;
+  float: left;
+  width: 330px;
+}
+
+aside    {
+  border: solid 1px black;
+  padding: 15px;
+  margin: 5px;
+  background: yellow;
+  position: absolute;
+  float: left;
+  margin-left: 370px;
+}
+
+@media (max-width: 680px) {
+  article {
+      float: none;
+      width: auto;
+  }
+
+  aside {
+      position: static;
+      float: none;
+      background: pink;
+      margin-left: 5px;
+  }
+}
