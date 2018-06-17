@@ -1,0 +1,169 @@
+<!DOCTYPE HTML>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>CSS3 - примеры переходов</title>
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/26E5E176-D914-8E4B-8996-B306890E33B3/main.js"
+        charset="UTF-8"></script>
+    <style>
+        .slickButton {
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            margin: 20px;
+            border: solid 2px gray;
+            background: lightgreen;
+            cursor: pointer;
+        }
+
+        .slickButton:hover {
+            color: black;
+            background: yellow;
+        }
+
+        .transition1 {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            transition: all 2.5s;
+        }
+
+        .transition2 {
+            -webkit-transition: all 0.5s 2s;
+            -moz-transition: all 0.5s 2s;
+            -o-transition: all 0.5s 2s;
+            transition: all 0.5s 2s;
+        }
+
+        .transition3 {
+            -webkit-transition-property: opacity, scale, background, color;
+            -moz-transition-property: opacity, scale, background, color;
+            -o-transition-property: opacity, scale, background, color;
+            transition-property: opacity, scale, background, color;
+
+            -webkit-transition-duration: 2s, 1.6s, 1s, 1s;
+            -moz-transition-duration: 2s, 1.6s, 1s, 1s;
+            -o-transition-duration: 2s, 1.6s, 1s, 1s;
+            transition-duration: 2s, 1.6s, 1s, 1s;
+        }
+
+        .transition3:hover,
+        .transition4:hover,
+        .transition5:hover {
+            opacity: .4;
+            -webkit-transform: scale(1.2, 1.2);
+            -moz-transform: scale(1.2, 1.2);
+            -o-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+        }
+
+        .transition4 {
+            -webkit-transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+            -moz-transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+            -o-transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+            transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+        }
+
+        .transition5 {
+            -webkit-transition: all 2000ms steps(3, end);
+            -moz-transition: all 2000ms steps(3, end);
+            -o-transition: all 2000ms steps(3, end);
+            transition: all 2000ms steps(3, end);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS3 - примеры переходов</h1>
+    <table border="2" cellpadding="15">
+        <tr>
+            <th width="280"></th>
+            <th>CSS</th>
+        </tr>
+        <tr>
+            <td>
+                <button class="slickButton transition1">Простая кнопка!</button>
+            </td>
+            <td>
+                <pre>
+                    <code>.transition1 {
+                            -webkit-transition: all 0.5s;
+                            -moz-transition: all 0.5s;
+                            -o-transition: all 0.5s;
+                            transition: all 0.5s;
+                    }</code>
+                </pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="slickButton transition2">Кнопка с задержкой анимации на 2 секунды</button>
+            </td>
+            <td>
+                <pre><code>.transition2 {
+    -webkit-transition: all 0.5s 2s;
+    -moz-transition: all 0.5s 2s;
+    -o-transition: all 0.5s 2s;
+    transition: all 0.5s 2s;
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="slickButton transition3">Анимация нескольких свойств</button>
+            </td>
+            <td>
+                <pre><code>.transition3 {	
+    -webkit-transition-property: opacity, scale, background, color;
+    -moz-transition-property: opacity, scale, background, color;
+    -o-transition-property: opacity, scale, background, color;
+    transition-property: opacity, scale, background, color;
+    
+    -webkit-transition-duration: 2s, 1.6s, 1s, 1s;
+    -moz-transition-duration: 2s, 1.6s, 1s, 1s;
+    -o-transition-duration: 2s, 1.6s, 1s, 1s;
+    transition-duration: 2s, 1.6s, 1s, 1s;
+}
+
+.transition3:hover {
+    color: black;
+    background: yellow;
+    opacity: .4;
+    -webkit-transform: scale(1.2,1.2);
+    -moz-transform: scale(1.2,1.2);
+    -o-transform: scale(1.2,1.2);
+    transform: scale(1.2,1.2);
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="slickButton transition4">Использование функции замедления</button>
+            </td>
+            <td>
+                <pre><code>.transition4 {
+    -webkit-transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+    -moz-transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+    -o-transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390);
+    transition: all 2000ms cubic-bezier(0.280, -0.315, 0.685, 1.390); 
+}</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button class="slickButton transition5">Шаги анимации</button>
+            </td>
+            <td>
+                <pre><code>.transition5 {
+    -webkit-transition: all 2000ms steps(3, end);
+    -moz-transition: all 2000ms steps(3, end);
+    -o-transition: all 2000ms steps(3, end);
+    transition: all 2000ms steps(3, end);
+}</code></pre>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
